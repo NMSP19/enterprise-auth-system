@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: enterprise-auth-system
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth_system
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
+  
+  web:
+    cors:
+      allowed-origins: http://localhost:4200
+      allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+      allowed-headers: '*'
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+jwt:
+  secret: this-is-a-very-long-secret-key-that-should-be-at-least-256-bits-long-for-production
+  expiration: 900000
+  refresh-expiration: 604800000
+
+logging:
+  level:
+    root: INFO
+    com.authsystem: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

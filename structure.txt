@@ -1,0 +1,89 @@
+enterprise-auth-system/
+├── backend/                          # Spring Boot Application
+│   ├── src/main/java/
+│   │   └── com/authsystem/
+│   │       ├── AuthSystemApplication.java
+│   │       ├── config/
+│   │       │   ├── SecurityConfig.java
+│   │       │   ├── JwtConfig.java
+│   │       │   └── CorsConfig.java
+│   │       ├── controller/
+│   │       │   ├── AuthController.java
+│   │       │   ├── UserController.java
+│   │       │   └── AdminController.java
+│   │       ├── service/
+│   │       │   ├── AuthService.java
+│   │       │   ├── UserService.java
+│   │       │   ├── JwtService.java
+│   │       │   └── SessionService.java
+│   │       ├── repository/
+│   │       │   ├── UserRepository.java
+│   │       │   ├── RoleRepository.java
+│   │       │   └── PermissionRepository.java
+│   │       ├── entity/
+│   │       │   ├── User.java
+│   │       │   ├── Role.java
+│   │       │   ├── Permission.java
+│   │       │   └── UserRole.java
+│   │       ├── filter/
+│   │       │   ├── JwtAuthenticationFilter.java
+│   │       │   └── SessionTimeoutFilter.java
+│   │       ├── exception/
+│   │       │   ├── AuthenticationException.java
+│   │       │   └── AuthorizationException.java
+│   │       └── dto/
+│   │           ├── LoginRequest.java
+│   │           ├── LoginResponse.java
+│   │           ├── TokenResponse.java
+│   │           └── UserDTO.java
+│   ├── src/main/resources/
+│   │   ├── application.yml
+│   │   ├── application-dev.yml
+│   │   ├── application-prod.yml
+│   │   └── db/
+│   │       └── migration/
+│   │           └── V1__initial_schema.sql
+│   ├── pom.xml
+│   └── README.md
+├── frontend/                         # Angular Application
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── modules/
+│   │   │   │   ├── auth/
+│   │   │   │   │   ├── login/
+│   │   │   │   │   ├── register/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   └── services/
+│   │   │   │   ├── admin/
+│   │   │   │   │   ├── dashboard/
+│   │   │   │   │   ├── users/
+│   │   │   │   │   └── roles/
+│   │   │   │   └── user/
+│   │   │   │       ├── profile/
+│   │   │   │       └── dashboard/
+│   │   │   ├── shared/
+│   │   │   │   ├── guards/
+│   │   │   │   │   └── auth.guard.ts
+│   │   │   │   ├── interceptors/
+│   │   │   │   │   └── auth.interceptor.ts
+│   │   │   │   └── services/
+│   │   │   │       └── auth.service.ts
+│   │   │   └── app.module.ts
+│   │   └── assets/
+│   ├── package.json
+│   ├── angular.json
+│   └── README.md
+├── database/                         # Database Setup
+│   ├── init.sql
+│   ├── seed-data.sql
+│   └── entra-id-setup.md
+├── docs/                             # Documentation
+│   ├── ARCHITECTURE.md
+│   ├── SETUP.md
+│   ├── API_DOCS.md
+│   ├── ENTRA_ID_SETUP.md
+│   ├── INTERVIEW_GUIDE.md
+│   └── DEPLOYMENT.md
+├── docker-compose.yml
+├── README.md
+└── .gitignore

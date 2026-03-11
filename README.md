@@ -242,30 +242,6 @@ enterprise-auth-system/
 
 ---
 
-## 📚 Documentation
-
-### Learn How It Works
-- **[INTERVIEW_GUIDE.md](docs/INTERVIEW_GUIDE.md)** - Complete explanations for interviews
-  - Authentication vs Authorization
-  - JWT token structure
-  - Login flow step-by-step
-  - Spring Security filter chain
-  - Angular guards and interceptors
-  - Database schema design
-  - Common interview questions
-
-### Setup & Deployment
-- **[SETUP.md](docs/SETUP.md)** - Detailed setup instructions
-  - Docker setup (recommended)
-  - Manual setup
-  - Environment configuration
-  - Troubleshooting
-
-### Code Details
-- **[COMPLETE_IMPLEMENTATION.md](docs/COMPLETE_IMPLEMENTATION.md)** - Full source code walkthrough
-
----
-
 ## 🎓 Learning Outcomes
 
 This project teaches:
